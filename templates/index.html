@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../static/css/appproject.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1"/>
+
+    <title>Space Trains Inc</title>
+</head>
+  <body>
+  <div id="wrapper">
+
+       <header>
+           <h1>Space Trains</h1>
+       </header>
+       <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('exp') }}">Expeditions</a> </li>
+                <li><a href="{{ url_for('port') }}">Port</a> </li>
+                <li><a href="{{ url_for('trains') }}">Trains Running</a> </li>
+                <li><a href="{{ url_for('about') }}">Search</a></li>
+
+
+
+            </ul>
+         </nav>
+      <main>
+
+
+            <p>Welcome valued employee! Select from one of the following from the navigation to get started.</p>
+      </main>
+  </div>
+  </body>
+</html>

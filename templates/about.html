@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--league of birds-->
+
+<html lang="en">
+
+<head>
+
+   <link href="../static/css/appproject.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1"/>
+    <title>Space Trains Database</title>
+</head>
+
+<body>
+<div id="wrapper">
+     <header>
+           <h1>Space Trains</h1>
+       </header>
+<nav>
+          <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('exp') }}">Expeditions</a> </li>
+                <li><a href="{{ url_for('port') }}">Port</a> </li>
+                <li><a href="{{ url_for('trains') }}">Trains Running</a> </li>
+                <li><a href="{{ url_for('about') }}">Search</a></li>
+          </ul>
+        </nav>
+   <div class = "jumbotron">
+       <h2>Space Trains Database</h2>
+       <form class="form-query" action="/select">
+       <label for="query" class = "sr-only">query</label>
+           <input type="query" name="query" id="query" class="form-control" placeholder="query" required autofocus>
+       </form>
+   </div>
+    {% if query %}
+        <p>You said: {{ query }}</p>
+        <table style="width:50%">
+            <tr>
+
+            </tr>
+            {% for item in data %}
+                <tr>
+                    <td>{{ item }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+</div>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link href="../static/css/appproject.css" rel="stylesheet">
+    <script src="../static/js/jquery-3.5.0.js"></script>
+    <script src="../static/js/addTrain.js"></script>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1"/>
+
+    <title>Space Trains Inc- Types of Trains</title>
+</head>
+<body>
+<div id="wrapper">
+     <header>
+           <h1>Space Trains</h1>
+       </header>
+<h2>Space Trains- Trains Available</h2>
+<nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('exp') }}">Expeditions</a> </li>
+                <li><a href="{{ url_for('port') }}">Port</a> </li>
+                <li><a href="{{ url_for('trains') }}">Trains Running</a> </li>
+                <li><a href="{{ url_for('about') }}">Search</a></li>
+
+
+            </ul>
+         </nav>
+
+<table>
+    <thead>
+    <tr>
+        <th>Name of Train</th>
+        <th>Number of Seats</th>
+        <th>Company that owns The Train</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for row in value %}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<p>
+
+
+
+</p>
+
+<h3>Register New Train</h3>
+<form class="form-query" action="/addTrain">
+       <label for="addTrain" class = "sr-only">Add Train</label>
+           <input type="addTrain" name="addTrain" id="addTrain" class="form-control" placeholder="" required autofocus>
+       </form>
+
+
+<h4>Decommission a Current Train</h4>
+ <form class="form-query" action="/deleteTrain">
+       <label for="delTrain" class = "sr-only">Delete Train</label>
+           <input type="delTrain" name="delTrain" id="delTrain" class="form-control" placeholder="" required autofocus>
+       </form>
+</div>
+</body>
+</html>

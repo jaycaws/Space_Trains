@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link href="../static/css/appproject.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1"/>
+    <title>Space Trains Inc- Ports</title>
+</head>
+<body>
+<div id="wrapper">
+     <header>
+           <h1>Space Trains</h1>
+       </header>
+<h2>Space Trains- Ports</h2>
+<nav>
+            <ul class="menu">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('exp') }}">Expeditions</a> </li>
+                <li><a href="{{ url_for('port') }}">Port</a> </li>
+                <li><a href="{{ url_for('trains') }}">Trains Running</a> </li>
+                <li><a href="{{ url_for('about') }}">Search</a></li>
+
+
+            </ul>
+         </nav>
+<table>
+    <thead>
+    <tr>
+        <th>Port Code</th>
+        <th>Name</th>
+        <th>Planet</th>
+        <th>Territory</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for row in value %}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h3>Register New Port</h3>
+<form class="form-query" action="/addPort">
+       <label for="addPort" class = "sr-only">Add Port</label>
+           <input type="addPort" name="addPort" id="addPort" class="form-control" placeholder="" required autofocus>
+       </form>
+
+
+<h4>Decommission a Current Port</h4>
+ <form class="form-query" action="/deletePort">
+       <label for="delPort" class = "sr-only">Delete Port</label>
+           <input type="delPort" name="delPort" id="delPort" class="form-control" placeholder="" required autofocus>
+       </form>
+
+</div>
+</body>
+</html>

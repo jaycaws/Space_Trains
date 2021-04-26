@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="../static/css/appproject.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1"/>
+    <title>Space Trains Inc- Expeditions</title>
+</head>
+<body>
+<div id="wrapper">
+     <header>
+           <h1>Space Trains</h1>
+       </header>
+    <nav>
+        <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('exp') }}">Expeditions</a> </li>
+                <li><a href="{{ url_for('port') }}">Port</a> </li>
+                <li><a href="{{ url_for('trains') }}">Trains Running</a> </li>
+                <li><a href="{{ url_for('about') }}">Search</a></li>
+
+        </ul>
+    </nav>
+<table>
+    <thead>
+    <tr>
+        <th>Expeditions Number</th>
+        <th>Date</th>
+        <th>Seats Available</th>
+        <th>Train ID</th>
+        <th>Departing Port Code</th>
+        <th>Arrival Port Code</th>
+        <th>Departure Time</th>
+        <th>Arrival Time</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for row in value %}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+                <td>{{row[4]}}</td>
+                <td>{{row[5]}}</td>
+                <td>{{row[6]}}</td>
+                <td>{{row[7]}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+    <h3>Register New Expedition</h3>
+<form class="form-query" action="/addExp">
+       <label for="addExp" class = "sr-only">Add Expedition</label>
+           <input type="addExp" name="addExp" id="addExp" class="form-control" placeholder="" required autofocus>
+       </form>
+
+
+<h4>Cancel a Current Expedition</h4>
+ <form class="form-query" action="/deleteExpedition">
+       <label for="delExp" class = "sr-only">Delete Expedition</label>
+           <input type="delExp" name="delExp" id="delExp" class="form-control" placeholder="" required autofocus>
+       </form>
+</div>
+</body>
+</html>

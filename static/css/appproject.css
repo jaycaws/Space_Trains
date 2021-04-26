@@ -1,0 +1,138 @@
+body {font-family:Comic-Sans;
+background-color:#845EC2;
+}
+
+h1{
+padding: 5px 10px;
+font-size: 42px;
+line-height: 36px;
+font-weight: lighter;
+}
+h2{
+margin: 0;
+padding: 0px 10px 5px;
+font-size: 18pt;
+line-height: 22pt;
+font-weight: lighter;
+}
+h3{
+margin: 0;
+padding: 0px 10px 5px;
+font-size: 18pt;
+line-height: 22pt;
+font-weight: lighter;
+}
+.details{
+color:#A49A87;
+background-color:#845EC2;
+float: right;
+padding: 5px 10px ;
+}
+
+nav a {
+tex-decoration: none;
+color: #FFFFFF;
+transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+#wrapper {
+width: 1000px;
+margin-left: auto;
+margin-right: auto;
+margin-top: auto;
+}
+
+header {
+background-position: right top;
+background-repeat: no-repeat;
+color: #008E9B;
+background-color: #845EC2;
+border-radius: 10px 10px 0 0
+}
+nav{
+color: #008E9B;
+background-color: #332532;
+padding: 5px 10px;
+font-size: 14pt;
+font-weight: bold;
+position: relative;
+}
+main {
+  color:#332532;
+  background-color:#845EC2;
+  padding: 10px;
+  z-index:0;
+}
+main a {
+  color:#845EC2;
+}
+.details {
+  background-color:#845EC2;
+  color:#332532;
+  float: right;
+  padding: 5px 10px;
+}
+wrapper{
+width: 1000px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 10px;
+}
+header, nav, section, aside, article, figure {
+display: block;
+}
+nav ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+nav li{
+display: inline;
+margin-right: 10px;
+}
+nav a:hoover{
+color: #332532;
+background-color: #845EC2;
+transition: background-color 0.25s ease;
+}
+
+table{
+border-collapse: collapse;
+border: 1px solid black;
+border-spacing: 0;
+}
+td{
+border: 1px solid black;
+padding: 5px;
+}
+th{
+border: 1px solid black;
+padding: 5px;
+}
+main th{
+text-align: left;
+}
+form{
+background-color:#332532;
+font-family: Comic-sans;
+width: 100;
+}
+label{
+float: left;
+display: block;
+width: 150px;
+text-align: left;
+}
+input, textarea{
+display: block;
+width: 300px;
+margin-bottom: 10px;
+margin-left: 150px;
+}
+textarea{
+height: 75px;
+}
+input[type="submit"]
+{
+margin-left: 110px;
+}
